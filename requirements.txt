@@ -1,7 +1,7 @@
 numpy
 pandas
 tensorflow
-keras==3.3.3
+keras
 opencv-python-headless
 Pillow
 streamlit
@@ -9,5 +9,6 @@ requests
 python-dotenv
 protobuf
 scikit-learn
+
 
 
