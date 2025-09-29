@@ -9,4 +9,5 @@ requests
 python-dotenv
 protobuf
 scikit-learn
+opencv
 
