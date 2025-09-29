@@ -5,12 +5,18 @@ import numpy as np
 import tensorflow as tf
 import os
 from openai import OpenAI
+import gdown
+from download_model import download_model
 
 
 # Load environment variables
 from dotenv import load_dotenv
 load_dotenv()  
 
+
+# 👇 Use download function instead of local file path
+model_path = download_model()
+model = tf.keras.models.load_model(model_path)
 
 # Load the trained model
 model = tf.keras.models.load_model("garbage_classification_model_inception.keras")
@@ -153,4 +159,5 @@ def main():
             st.image(dustbin_image, caption=f"Dustbin for {predicted_category}", width=200)
 
 if __name__ == "__main__":
+
     main()
