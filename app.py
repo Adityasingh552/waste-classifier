@@ -10,15 +10,11 @@ import gdown
 from download_model import download_model
 from tensorflow.keras.models import load_model
 
+MODEL_PATH = "garbage_classification_model_inception.keras"
+model = load_model(MODEL_PATH)
+st.success("Model loaded successfully!")
 
 
-# CONFIGURE MODEL PATH
-
-MODEL_PATH = "garbage_classification_model_inception.keras"  # .keras format
-
-# Google Drive Direct Download URL
-GOOGLE_DRIVE_ID = "1Y8XC5LTKqwTJKKsS2X32_YfHGI_PjXRp"
-DRIVE_URL = f"https://drive.google.com/uc?export=download&id={GOOGLE_DRIVE_ID}"
 
 
 # DOWNLOAD MODEL IF NOT EXISTS
@@ -183,6 +179,7 @@ def main():
 if __name__ == "__main__":
 
     main()
+
 
 
 
