@@ -14,7 +14,7 @@ from tensorflow.keras.models import load_model
 
 # CONFIGURE MODEL PATH
 
-MODEL_PATH = "garbage_model.keras"  # .keras format
+MODEL_PATH = "garbage_classification_model_inception.keras"  # .keras format
 
 # Google Drive Direct Download URL
 GOOGLE_DRIVE_ID = "1Y8XC5LTKqwTJKKsS2X32_YfHGI_PjXRp"
@@ -183,6 +183,7 @@ def main():
 if __name__ == "__main__":
 
     main()
+
 
 
 
