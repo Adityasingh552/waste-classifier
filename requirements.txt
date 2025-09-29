@@ -10,6 +10,7 @@ python-dotenv
 protobuf
 scikit-learn
 openai
+gdown
 
 
 
