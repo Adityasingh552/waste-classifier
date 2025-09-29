@@ -4,6 +4,7 @@ import cv2
 import numpy as np
 import tensorflow as tf
 import os
+import requests
 from openai import OpenAI
 import gdown
 from download_model import download_model
@@ -180,4 +181,5 @@ def main():
 if __name__ == "__main__":
 
     main()
+
 
