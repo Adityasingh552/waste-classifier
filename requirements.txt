@@ -1,0 +1,15 @@
+numpy==1.26.4
+pandas==2.2.2
+tensorflow==2.16.1
+keras==3.3.3
+opencv-python==4.10.0.84
+Pillow==10.4.0
+streamlit==1.38.0
+requests==2.32.3
+python-dotenv==1.0.1
+protobuf==4.25.3
+scikit-learn==1.5.2
+
+# GPU version (use only if you have CUDA installed locally)
+# Comment CPU line above and uncomment this line if using GPU
+# tensorflow-gpu==2.10.1 
