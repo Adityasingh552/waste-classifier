@@ -1,0 +1,14 @@
+[server]
+# Allow larger file uploads (50MB to provide buffer beyond 25MB requirement)
+maxUploadSize = 50
+
+# Increase message size to handle large files
+maxMessageSize = 50
+
+# Enable CORS for better compatibility
+enableCORS = false
+enableXsrfProtection = false
+
+[browser]
+# Disable usage stats collection for better performance
+gatherUsageStats = false
