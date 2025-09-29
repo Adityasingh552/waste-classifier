@@ -9,14 +9,33 @@ import gdown
 from download_model import download_model
 
 
+# CONFIGURE MODEL PATH
+
+MODEL_PATH = "garbage_model.keras"  # .keras format
+
+# Google Drive Direct Download URL
+GOOGLE_DRIVE_ID = "1Y8XC5LTKqwTJKKsS2X32_YfHGI_PjXRp"
+DRIVE_URL = f"https://drive.google.com/uc?export=download&id={GOOGLE_DRIVE_ID}"
+
+
+# DOWNLOAD MODEL IF NOT EXISTS
+
+if not os.path.exists(MODEL_PATH):
+    st.info("Downloading model, please wait...")
+    r = requests.get(DRIVE_URL, allow_redirects=True)
+    with open(MODEL_PATH, "wb") as f:
+        f.write(r.content)
+    st.success("Model downloaded!")
+
+
+# LOAD MODEL
+
+model = load_model(MODEL_PATH)
+st.success("Model loaded successfully!")
+
 # Load environment variables
 from dotenv import load_dotenv
 load_dotenv()  
-
-
-# 👇 Use download function instead of local file path
-model_path = download_model()
-model = tf.keras.models.load_model(model_path)
 
 # Load the trained model
 model = tf.keras.models.load_model("garbage_classification_model_inception.keras")
@@ -161,3 +180,4 @@ def main():
 if __name__ == "__main__":
 
     main()
+
