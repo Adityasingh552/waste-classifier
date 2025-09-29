@@ -8,6 +8,8 @@ import requests
 from openai import OpenAI
 import gdown
 from download_model import download_model
+from tensorflow.keras.models import load_model
+
 
 
 # CONFIGURE MODEL PATH
@@ -181,5 +183,6 @@ def main():
 if __name__ == "__main__":
 
     main()
+
 
 
